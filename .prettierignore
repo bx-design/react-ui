@@ -1,0 +1,10 @@
+.next
+.now
+.circleci
+dist
+coverage
+public
+esm
+*.d.ts
+*.yml
+*.snap
