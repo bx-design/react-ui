@@ -1,10 +1,16 @@
 module.exports = {
+  verbose: true,
   preset: 'ts-jest',
-  testMatch: ['<rootDir>/src/**/*.spec.tsx'],
-  setupFilesAfterEnv: ['<rootDir>/jest-setup.ts'],
+  testMatch: ['<rootDir>/**/*.spec.tsx'],
+  setupFilesAfterEnv: ['<rootDir>/tests/jest-setup.ts'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
+  testEnvironment: 'jsdom',
+  transform: {
+    '^.+\\.tsx?$': ['babel-jest', { configFile: './tests/.babelrc.js' }],
+  },
   globals: {
     'ts-jest': {
-      tsconfig: 'tsconfig.test.json'
-    }
-  }
+      tsconfig: 'tests/tsconfig.test.json',
+    },
+  },
 }
