@@ -1,6 +1,6 @@
-import { css } from 'styled-jsx/css'
+import css from 'styled-jsx/css'
 
-export const baseCss = css`
+const baseStyle = css.global`
   :root {
     /* bx colors */
     /* blue */
@@ -135,3 +135,5 @@ export const baseCss = css`
       'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   }
 `
+
+export default baseStyle
