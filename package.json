@@ -84,5 +84,8 @@
   },
   "dependencies": {
     "styled-jsx": "3.3.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
