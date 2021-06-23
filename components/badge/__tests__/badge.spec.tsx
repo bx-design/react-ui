@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
-import Badge, { VarianType } from './badge'
+import Badge, { VarianType } from '../badge'
 
 describe('<Badge /> Component', () => {
   test('Render <Badge /> toMatchSnapshot', () => {

@@ -1,7 +1,7 @@
 module.exports = {
   verbose: true,
   preset: 'ts-jest',
-  testMatch: ['<rootDir>/**/*.spec.tsx'],
+  testMatch: ['<rootDir>/**/__tests__/*.spec.tsx'],
   setupFilesAfterEnv: ['<rootDir>/tests/jest-setup.ts'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   testEnvironment: 'jsdom',
