@@ -7,7 +7,7 @@ import { baseStyle } from '../themes'
 
 const BxReactUiContext = createContext<UiProviderContext>(null)
 
-function BxReactUiProvider({ children }: UiProviderProps) {
+function ReactUiProvider({ children }: UiProviderProps) {
   return (
     <BxReactUiContext.Provider value={null}>
       <style global jsx>
@@ -25,8 +25,8 @@ type MemoProviderType = MemoExoticComponent<
 > & {
   flush: typeof flushToReact
 }
-const MemoProvider = memo(BxReactUiProvider) as MemoProviderType
+const BxReactUiProvider = memo(ReactUiProvider) as MemoProviderType
 
-MemoProvider.flush = flush
+BxReactUiProvider.flush = flush
 
-export default MemoProvider
+export default BxReactUiProvider
