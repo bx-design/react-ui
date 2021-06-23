@@ -1,6 +1,6 @@
 {
   "name": "@bx-design/react-ui",
-  "version": "1.0.0",
+  "version": "1.0.0-canary.0",
   "main": "dist/index.js",
   "module": "esm/index.js",
   "types": "dist/index.d.ts",
@@ -84,5 +84,8 @@
   },
   "dependencies": {
     "styled-jsx": "3.3.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
