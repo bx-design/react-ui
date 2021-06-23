@@ -9,7 +9,9 @@ function BxReactUiProvider({ children }: UiProviderProps) {
   return (
     <>
       <style global jsx>
-        {themes.baseStyle}
+        {`
+          ${themes.baseStyle}
+        `}
       </style>
       {children}
     </>
