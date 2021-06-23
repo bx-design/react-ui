@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Badge /> Component Render <Badge /> toMatchSnapshot 1`] = `
+exports[`<Badge /> Component Render toMatchSnapshot 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>

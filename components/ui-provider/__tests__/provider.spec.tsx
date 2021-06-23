@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react'
 
 import BxReactUiProvider from '../provider'
-describe('<BxReactUiProvider />', () => {
-  test('should render correctly', () => {
+describe('<BxReactUiProvider /> Component', () => {
+  test('Should render component correctly', () => {
     render(
       <div>
         <BxReactUiProvider>
@@ -13,6 +13,15 @@ describe('<BxReactUiProvider />', () => {
     expect(screen.getByText('Bx React Ui Provider')).toHaveTextContent(
       'Bx React Ui Provider',
     )
-    expect(screen.getByText('Bx React Ui Provider')).toMatchSnapshot()
+  })
+  test('Render toMatchSnapshot', () => {
+    const html = render(
+      <div>
+        <BxReactUiProvider>
+          <h1>Bx React Ui Provider</h1>
+        </BxReactUiProvider>
+      </div>,
+    )
+    expect(html).toMatchSnapshot()
   })
 })

@@ -5,18 +5,18 @@ import userEvent from '@testing-library/user-event'
 import Badge, { VarianType } from '../badge'
 
 describe('<Badge /> Component', () => {
-  test('Render <Badge /> toMatchSnapshot', () => {
+  test('Render toMatchSnapshot', () => {
     const html = render(<Badge>Badge</Badge>)
     expect(html).toMatchSnapshot()
   })
 
-  test('Render <Badge /> Component', () => {
+  test('Should render component correctly', () => {
     render(<Badge>Badge</Badge>)
     const badge = screen.getByTestId('badge')
     expect(badge).toHaveTextContent('Badge')
   })
 
-  test('Render <Badge /> Component with props', () => {
+  test('Should render Component with props', () => {
     render(
       <Badge variant='primary' rounded>
         Badge
@@ -28,7 +28,7 @@ describe('<Badge /> Component', () => {
     expect(badge).toHaveClass('badge-rounded')
   })
 
-  test('Render <Badge /> Component with changing props', () => {
+  test('Should render Component with changing props', () => {
     function MockApp() {
       const [variant, setVariant] = useState<VarianType>('primary')
       const [rounded, setRounded] = useState(false)
