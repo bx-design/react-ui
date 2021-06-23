@@ -1,3 +1,4 @@
 /// <reference types="styled-jsx" />
 export { default as Badge } from './badge'
+export type { BadgeProps } from './badge'
 export { default as BxReactUiProvider } from './ui-provider'
