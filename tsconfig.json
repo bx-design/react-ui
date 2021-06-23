@@ -25,5 +25,11 @@
     "typeRoots": ["node_modules/@types", "./typings"]
   },
   "exclude": ["node_modules", "es", "examples", "dist"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/**/*.tsx"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx"
+  ]
 }
