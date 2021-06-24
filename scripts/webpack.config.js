@@ -75,16 +75,8 @@ module.exports = async () => {
           exclude: /(node_modules)/,
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/env', '@babel/typescript'],
-            plugins: [
-              'styled-jsx/babel',
-              [
-                '@babel/plugin-transform-react-jsx',
-                {
-                  runtime: 'automatic',
-                },
-              ],
-            ],
+            presets: ['@babel/env', '@babel/react', '@babel/typescript'],
+            plugins: ['styled-jsx/babel'],
           },
         },
       ],

@@ -1,32 +1,29 @@
-import { memo, MemoExoticComponent, createContext } from 'react'
+import React from 'react'
 import flush from 'styled-jsx/server'
 import flushToReact from 'styled-jsx/server'
 
-import type { UiProviderContext, UiProviderProps } from './types'
+import type { UiProviderProps } from './types'
 import { baseStyle } from '../themes'
 
-const BxReactUiContext = createContext<UiProviderContext>(null)
-
-function BxReactUiProvider({ children }: UiProviderProps) {
+function ReactUiProvider({ children }: UiProviderProps) {
   return (
-    <BxReactUiContext.Provider value={null}>
+    <>
       <style global jsx>
-        {`
-          ${baseStyle}
-        `}
+        {baseStyle}
       </style>
       {children}
-    </BxReactUiContext.Provider>
+    </>
   )
 }
 
-type MemoProviderType = MemoExoticComponent<
+type MemoProviderType = React.MemoExoticComponent<
   ({ children }: UiProviderProps) => JSX.Element
 > & {
   flush: typeof flushToReact
 }
-const MemoProvider = memo(BxReactUiProvider) as MemoProviderType
 
-MemoProvider.flush = flush
+const BxReactUiProvider = React.memo(ReactUiProvider) as MemoProviderType
 
-export default MemoProvider
+BxReactUiProvider.flush = flush
+
+export default BxReactUiProvider

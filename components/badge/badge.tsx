@@ -1,4 +1,4 @@
-import { forwardRef, memo } from 'react'
+import React from 'react'
 import cs from 'classnames'
 
 import { BaseChildrenProps } from '../types'
@@ -17,7 +17,7 @@ export interface BadgeProps extends BaseChildrenProps {
   rounded?: boolean
 }
 
-const BadgeComponentRef = forwardRef<HTMLSpanElement, BadgeProps>(
+const BadgeComponentRef = React.forwardRef<HTMLSpanElement, BadgeProps>(
   ({ children, variant = 'primary', rounded = false }: BadgeProps, ref) => {
     return (
       <span
@@ -81,6 +81,6 @@ const BadgeComponentRef = forwardRef<HTMLSpanElement, BadgeProps>(
 )
 BadgeComponentRef.displayName = 'BadgeComponentRef'
 
-const Badge = memo(BadgeComponentRef)
+const Badge = React.memo(BadgeComponentRef)
 
 export default Badge
