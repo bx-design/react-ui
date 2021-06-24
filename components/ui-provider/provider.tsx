@@ -1,4 +1,4 @@
-import { memo, MemoExoticComponent } from 'react'
+import React from 'react'
 import flush from 'styled-jsx/server'
 import flushToReact from 'styled-jsx/server'
 
@@ -9,22 +9,20 @@ function ReactUiProvider({ children }: UiProviderProps) {
   return (
     <>
       <style global jsx>
-        {`
-          ${baseStyle}
-        `}
+        {baseStyle}
       </style>
       {children}
     </>
   )
 }
 
-type MemoProviderType = MemoExoticComponent<
+type MemoProviderType = React.MemoExoticComponent<
   ({ children }: UiProviderProps) => JSX.Element
 > & {
   flush: typeof flushToReact
 }
 
-const BxReactUiProvider = memo(ReactUiProvider) as MemoProviderType
+const BxReactUiProvider = React.memo(ReactUiProvider) as MemoProviderType
 
 BxReactUiProvider.flush = flush
 

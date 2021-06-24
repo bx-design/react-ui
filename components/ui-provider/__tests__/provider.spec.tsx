@@ -1,6 +1,8 @@
+import React from 'react'
 import { render, screen } from '@testing-library/react'
 
 import BxReactUiProvider from '../provider'
+
 describe('<BxReactUiProvider /> Component', () => {
   test('Should render component correctly', () => {
     render(

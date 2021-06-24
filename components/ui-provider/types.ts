@@ -1,5 +1,5 @@
-import { ReactNode } from 'react'
+import React from 'react'
 
 export interface UiProviderProps {
-  children: ReactNode
+  children: React.ReactNode
 }

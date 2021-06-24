@@ -1,4 +1,4 @@
-import { forwardRef, memo } from 'react'
+import React, { forwardRef, memo } from 'react'
 import cs from 'classnames'
 
 import { BaseChildrenProps } from '../types'
