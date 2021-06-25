@@ -126,6 +126,17 @@ const baseStyle = css.global`
     --bx-alert-warning-border: var(--bx--yellow-brown);
     --bx-alert-warning-fg: var(--bx--yellow-brown);
     --bx-alert-warning-bg: var(--bx--yellow-blank);
+    /* general */
+    --bx-bg: #ffffff;
+    --bx-bg-secondary: #eaeaeb;
+    --bx-fg: #18191a;
+    --bx-grey: #eaeaea;
+    --bx-selection: rgba(0, 0, 0, 0.99);
+    --bx-bg-gradient: linear-gradient(
+      85.92deg,
+      var(--bx-color-blue) 14.32%,
+      var(--bx-color-lblue) 99.53%
+    );
     /* fonts */
     --bx-font-primary: 'Mont', system-ui, -apple-system, 'Segoe UI', Roboto,
       'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
