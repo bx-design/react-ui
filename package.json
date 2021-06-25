@@ -61,7 +61,6 @@
     "@typescript-eslint/parser": "^4.28.0",
     "babel-jest": "^27.0.5",
     "babel-loader": "^8.2.2",
-    "classnames": "^2.3.1",
     "eslint": "^7.29.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.23.4",
