@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef, memo } from 'react'
 import cs from '../utils/classnames'
 
 import { BaseChildrenProps } from '../types'
@@ -17,7 +17,7 @@ export interface BadgeProps extends BaseChildrenProps {
   rounded?: boolean
 }
 
-const BadgeComponentRef = React.forwardRef<HTMLSpanElement, BadgeProps>(
+const BadgeComponentRef = forwardRef<HTMLSpanElement, BadgeProps>(
   ({ children, variant = 'primary', rounded = false }: BadgeProps, ref) => {
     return (
       <span
@@ -50,13 +50,13 @@ const BadgeComponentRef = React.forwardRef<HTMLSpanElement, BadgeProps>(
               background-color: var(--bx-orange);
             }
             .badge-secondary {
-              background-color: var(--bx-secondary);
+              background-color: var(--bx-grey-mistery);
             }
             .badge-success {
               background-color: var(--bx-green-future);
             }
             .badge-dark {
-              background-color: var(--bx-dark);
+              background-color: var(--bx-black);
             }
             .badge-danger {
               background-color: var(--bx-red-medium);
@@ -81,6 +81,6 @@ const BadgeComponentRef = React.forwardRef<HTMLSpanElement, BadgeProps>(
 )
 BadgeComponentRef.displayName = 'BadgeComponentRef'
 
-const Badge = React.memo(BadgeComponentRef)
+const Badge = memo(BadgeComponentRef)
 
 export default Badge
