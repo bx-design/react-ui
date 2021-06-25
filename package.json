@@ -1,6 +1,6 @@
 {
   "name": "@bx-design/react-ui",
-  "version": "1.0.0-canary.8",
+  "version": "1.0.0-canary.9",
   "main": "dist/index.js",
   "module": "esm/index.js",
   "types": "dist/index.d.ts",
