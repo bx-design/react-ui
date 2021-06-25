@@ -127,6 +127,7 @@ const baseStyle = css.global`
     --bx-alert-warning-fg: var(--bx--yellow-brown);
     --bx-alert-warning-bg: var(--bx--yellow-blank);
     /* general */
+    --bx-secondary: #eaeaeb;
     --bx-bg: #ffffff;
     --bx-bg-secondary: #eaeaeb;
     --bx-fg: #18191a;

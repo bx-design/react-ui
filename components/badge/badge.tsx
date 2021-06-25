@@ -50,13 +50,13 @@ const BadgeComponentRef = forwardRef<HTMLSpanElement, BadgeProps>(
               background-color: var(--bx-orange);
             }
             .badge-secondary {
-              background-color: var(--bx-secondary);
+              background-color: var(--bx-grey-mistery);
             }
             .badge-success {
               background-color: var(--bx-green-future);
             }
             .badge-dark {
-              background-color: var(--bx-dark);
+              background-color: var(--bx-black);
             }
             .badge-danger {
               background-color: var(--bx-red-medium);
