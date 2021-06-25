@@ -1,3 +1,5 @@
 import baseStyle from './base'
+import resetStyle from './reset'
+import style from './style'
 
-export { baseStyle }
+export { baseStyle, resetStyle, style }
