@@ -1,8 +1,4 @@
-dist/*
-esm/*
+packages/*/dist
+packages/*/coverage
 node_modules
 *.config.js
-tests/*
-scripts/*
-.next/*
-public/*

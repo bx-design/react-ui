@@ -1,0 +1,46 @@
+{
+  "name": "@bx-design/react-ui-table",
+  "version": "1.0.0",
+  "sideEffects": false,
+  "repository": "git@github.com:bx-design/react-ui.git",
+  "author": "BX Creative Studio",
+  "license": "MIT",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "typings": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "default": "./dist/esm/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "lint": "yarn lint:src",
+    "lint:src": "eslint src --ext .ts,.tsx --config ../../.eslintrc.json",
+    "prebuild": "rimraf dist",
+    "build": "yarn build:types && cross-env INPUT_FILE=src/index.ts rollup -c ../../rollup.config.js",
+    "build:types": "tsc -p ./tsconfig.json --declarationDir dist/types"
+  },
+  "peerDependencies": {
+    "@bx-design/react-icons": ">=0.3.2",
+    "react": ">=17.0.2"
+  },
+  "dependencies": {
+    "@bx-design/react-icons": "^0.3.2",
+    "@bx-design/react-ui-forms": "^1.0.0",
+    "@bx-design/react-ui-utils": "^1.0.0",
+    "@reach/auto-id": "^0.16.0"
+  },
+  "devDependencies": {
+    "@bx-design/react-icons": "^0.3.2",
+    "@headlessui/react": "^1.4.2",
+    "react": "^17.0.2"
+  }
+}

@@ -1,14 +1,23 @@
-# dependencies
-node_modules
+# local changelog cache (lerna-changelog)
+.changelog/
 
-# testing
-/coverage
+# Dependency directories
+node_modules/
+# dist
+packages/*/dist
 
-# production
-/build
-dist
-esm
+docs/.next
 
-# misc
+# Optional npm cache directory
+.npm
+
+# Mac files
 .DS_Store
-.env*
+
+lerna-debug.log
+# Yarn
+yarn-error.log
+.pnp/
+.pnp.js
+# Yarn Integrity file
+.yarn-integrity
