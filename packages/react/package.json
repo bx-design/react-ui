@@ -1,5 +1,5 @@
 {
-  "name": "@bx-design/react-ui-dropdown",
+  "name": "@bx-design/react-ui",
   "version": "1.0.0",
   "sideEffects": false,
   "license": "MIT",
@@ -25,18 +25,29 @@
     "lint": "yarn lint:src",
     "lint:src": "eslint src --ext .ts,.tsx --config ../../.eslintrc.json",
     "prebuild": "rimraf dist",
-    "build": "yarn build:types && cross-env INPUT_FILE=src/index.ts rollup -c ../../rollup.config.js",
+    "build": "concurrently yarn:build:*",
+    "build:esm": "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .ts,.tsx -d dist/esm --source-maps",
+    "build:cjs": "cross-env BABEL_ENV=cjs babel src --root-mode upward --extensions .ts,.tsx -d dist/cjs --source-maps",
     "build:types": "tsc -p ./tsconfig.json --declarationDir dist/types"
   },
   "dependencies": {
+    "@bx-design/react-ui-alert": "^1.0.0",
+    "@bx-design/react-ui-button": "^1.0.0",
+    "@bx-design/react-ui-card": "^1.0.0",
+    "@bx-design/react-ui-checkbox": "^1.0.0",
+    "@bx-design/react-ui-dropdown": "^1.0.0",
+    "@bx-design/react-ui-forms": "^1.0.0",
+    "@bx-design/react-ui-modal": "^1.0.0",
+    "@bx-design/react-ui-spinner": "^1.0.0",
+    "@bx-design/react-ui-table": "^1.0.0",
     "@bx-design/react-ui-utils": "^1.0.0"
   },
   "devDependencies": {
-    "@headlessui/react": "^1.4.2",
-    "react": "^17.0.2"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "peerDependencies": {
-    "@headlessui/react": ">=1.4.2",
-    "react": ">=17.0.2"
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2"
   }
 }

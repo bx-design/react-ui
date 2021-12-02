@@ -15,20 +15,11 @@
   "devDependencies": {
     "@headlessui/react": "^1.4.2",
     "autoprefixer": "^10.4.0",
-    "clean-css": "^5.2.2",
-    "postcss": "^8.4.1",
-    "postcss-import": "^14.0.2",
+    "postcss": "^8.4.4",
     "react": "^17.0.2",
     "tailwindcss": "^2.2.19"
   },
   "peerDependencies": {
-    "@bx-design/react-icons": ">=0.3.2",
-    "react": ">=17.0.2",
-    "tailwindcss": ">=2.2.19"
-  },
-  "dependencies": {
-    "@bx-design/react-icons": "^0.3.2",
-    "@bx-design/react-ui-forms": "^1.0.0",
-    "@bx-design/react-ui-utils": "^1.0.0"
+    "tailwindcss": ">=2.1.0"
   }
 }

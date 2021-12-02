@@ -28,12 +28,6 @@
     "build": "yarn build:types && cross-env INPUT_FILE=src/index.ts rollup -c ../../rollup.config.js",
     "build:types": "tsc -p ./tsconfig.json --declarationDir dist/types"
   },
-  "dependencies": {
-    "@bx-design/react-icons": "^0.3.2",
-    "@bx-design/react-ui-forms": "^1.0.0",
-    "@bx-design/react-ui-utils": "^1.0.0",
-    "@reach/auto-id": "^0.16.0"
-  },
   "devDependencies": {
     "@bx-design/react-icons": "^0.3.2",
     "@headlessui/react": "^1.4.2",

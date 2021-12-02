@@ -27,18 +27,12 @@
     "build:types": "tsc -p ./tsconfig.json --declarationDir dist/types"
   },
   "dependencies": {
-    "@bx-design/react-icons": "^0.3.2",
-    "@bx-design/react-ui-forms": "^1.0.0",
-    "@reach/auto-id": "^0.16.0",
     "clsx": "^1.1.1"
   },
   "peerDependencies": {
-    "@bx-design/react-icons": ">=0.3.2",
     "react": ">=17.0.2"
   },
   "devDependencies": {
-    "@bx-design/react-icons": "^0.3.2",
-    "@headlessui/react": "^1.4.2",
     "react": "^17.0.2"
   }
 }
