@@ -23,9 +23,13 @@
     ]
   },
   "scripts": {
+    "clean": "lerna clean --yes && rm -rf node_modules",
+    "clean-dist": "yarn lerna exec -- rimraf dist",
+    "prestart": "yarn && yarn bootstrap",
+    "boot": "yarn prestart && yarn build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "lerna run build --no-private --stream",
+    "build": "lerna run build --no-private --stream --concurrency=1 --include-dependencies",
     "bootstrap": "yarn install && lerna bootstrap --use-workspaces",
     "release": "changeset publish"
   },
